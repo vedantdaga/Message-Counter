@@ -4,9 +4,18 @@ import csv
 
 
 def counter():
-    currdate = datetime.datetime(2015, 10, 8)  # set current date to the start date of message counting
+    startyear = int(raw_input("Enter the year the messages begin (YYYY): "))
+    startmonth = int(raw_input("Enter the month the messages begin (mm): "))
+    startday = int(raw_input("Enter the day the messages begin (dd): "))
+
+    currdate = datetime.datetime(startyear, startmonth, startday)  # set current date to the start date of messages
     datestring = currdate.strftime("%b %d, %Y")  # put date into MMM dd, YYYY format
     todaystring = date.today().strftime("%b %d, %Y")  # convert today's date to a string. used as end date
+
+    """add section to allow user to read multiple files 
+        and add section that reads multiple files and combines them into one
+    OR
+        add section that allows multi-file read/scan/search"""
 
     f = open("messages.html").read()  # read the messages file
 
