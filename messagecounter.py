@@ -12,11 +12,6 @@ def counter():
     datestring = currdate.strftime("%b %d, %Y")  # put date into MMM dd, YYYY format
     todaystring = date.today().strftime("%b %d, %Y")  # convert today's date to a string. used as end date
 
-    """add section to allow user to read multiple files 
-        and add section that reads multiple files and combines them into one
-    OR
-        add section that allows multi-file read/scan/search"""
-
     f = open("messages.html").read()  # read the messages file
 
     with open('messagecsv.csv', 'wb') as outputfile:
